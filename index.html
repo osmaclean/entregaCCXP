@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviva o Épico - CCXP</title>
+    <link rel="stylesheet" href="assets/src/style/style.css">
+    <link rel="stylesheet" href="assets/src/style/modal.css">
+    <link rel="shortcut icon" href="assets/src/img/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <figure>
+                <img src="assets/src/img/logo.svg" alt="Logotipo CCXP" aria-label="Logotipo CCXP">
+            </figure>
+        </nav>
+    </header>
+
+    <main id="content">
+        <section id="first">
+            <h1>Reviva o Épico</h1>
+            <h3>de 01 à 04 de Dezembro</h3>
+            <p>Você consegue sentir? É aquela sensação de finalmente poder falar em voz alta: "estamos em casa". Sim, em
+                dezembro de 2023, teremos a volta da CCXP física. Mas não será qualquer CCXP, vai ser a maior de todos
+                os tempos. Prepare-se para visitar seus universos favoritos, explorar o Artists' Valley, se emocionar
+                nos auditórios e encontrar aventuras épicas a cada passo pelos nossos corredores.</p>
+        </section>
+
+        <section id="second">
+            <section id="countdown">
+                <div id="countdown_time">
+                    <div id="day" class="box">
+                        <h1>00</h1>
+                    </div>
+                    <div id="hour" class="box">
+                        <h1>00</h1>
+                    </div>
+                    <div id="minutes" class="box">
+                        <h1>00</h1>
+                    </div>
+                    <div id="seconds" class="box p">
+                        <h1>00</h1>
+                    </div>
+                </div>
+                <h3 id="subtitle">Para a maior ccxp de todos os tempos</h3>
+            </section>
+            <section id="video">
+                <video autoplay loop muted>
+                    <source src="assets/src/video/alerquina.mp4" type="video/mp4">
+                </video>
+            </section>
+        </section>
+    </main>
+
+    <section id="content">
+        <div id="globalContainer">
+            <h1>Ainda há tempo de garantir o seu, mas corre!</h1>
+            <div id="containerFirst">
+                <figure>
+                    <img src="assets/src/img/cardOneTreated.png" aria-label="Ingresso Quinta-Feira"
+                        alt="Ingresso Quinta-Feira">
+                </figure>
+                <figure>
+                    <img src="assets/src/img/cardTwoTreated.png" aria-label="Ingresso Sexta-Fera"
+                        alt="Ingresso Sexta-Fera">
+                </figure>
+                <figure>
+                    <img src="assets/src/img/cardThreeTreated.png" aria-label="Ingresso Sábado - Esgotado"
+                        alt="Ingresso Sábado - Esgotado">
+                </figure>
+                <figure>
+                    <img src="assets/src/img/cardFourTreated.png" aria-label="Ingresso Domingo" alt="Ingresso Domingo">
+                </figure>
+            </div>
+        </div>
+        <div id="containerSecond">
+            <button class="guaranteeYour" id="x" data-modal-guarantee="modalGuarantee">Garanta o Seu!</button>
+
+            <!-- Modal -->
+            <div class="modal-wrapper" id="modalGuarantee">
+                <div class="modal">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Garanta Agora!</h3>
+                        <button class="modal-close" data-modal-guarantee="modalGuarantee">X</button>
+                    </div>
+                    <div class="modal-body inputs-modal">
+                        <label id="labelNome" for="nome">Nome</label>
+                        <input autocomplete="off" type="text" name="nome" id="nome" placeholder="Digite o seu nome...">
+
+                        <label id="labelEmail" for="email">E-mail</label>
+                        <input autocomplete="off" type="email" name="email" id="email"
+                            placeholder="Digite o seu e-mail...">
+
+                        <label id="labelTel" for="cel">Telefone</label>
+                        <input autocomplete="off" type="tel" name="cel" id="cel" placeholder="(99) 99999-9999 ">
+
+                        <label id="select">Selecione o dia</label>
+                        <div id="checkbox">
+                            <input type="checkbox" name="checkboxQui" id="checkboxQui">
+                            <label id="labelQui" for="checkbox">Quinta</label>
+
+                            <input type="checkbox" name="checkboxSex" id="checkboxSex">
+                            <label id="labelSex" for="checkbox">Sexta</label>
+
+                            <input type="checkbox" name="checkboxDom" id="checkboxDom">
+                            <label id="labelDom" for="checkbox">Domingo</label>
+                        </div>
+
+                    </div>
+                    <div id="buttonBox">
+                        <button id="button-reserv">Reservar</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <script src="assets/src/js/script.js"></script>
+    <script src="assets/src/js/modal.js"></script>
+</body>
+
+</html>

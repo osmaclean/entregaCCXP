@@ -1,0 +1,490 @@
+:root {
+    --color-primary: #FFD900;
+    --color-2nd: #514988;
+    --color-3th: #E33881;
+    --color-4th: #F3C61F;
+    
+    --fs-1-text: 1.813rem;
+    
+    --fs-1-title: 4.375rem;
+    --fs-2-title: 1.875rem;
+    
+    --fs-button: 2.625rem;
+
+    --border-radius: .625rem;
+    
+    
+}
+
+
+.modal-wrapper {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 6;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem 0rem 1rem 0rem;
+    align-items: center;
+    width: 100%;
+}
+
+.modal-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 50%;
+    height: 100%;
+}
+
+.modal-close {
+    width: 1.5rem;
+    height: 100%;
+    background: transparent;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+
+.show-modal {
+    display: flex;
+}
+
+.show-modal .modal {
+    font-family: Verdana, sans-serif;
+    animation: modalAnimation 1s ease;
+    padding: 2rem 1rem 2rem 1rem;
+    border: .313rem solid;
+    border-image: linear-gradient(22.5deg, var(--color-primary), var(--color-2nd)) 1;
+    width: 95%;
+    height: 99%;
+    background-color: white;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@keyframes modalAnimation {
+    0%{
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+        
+
+    }
+}
+
+.inputs-modal {
+    display: flex;
+    flex-direction: column;
+    padding: .5rem 1rem;
+    width: 100%;
+}
+
+:is(label#labelNome,
+    label#labelEmail,
+    label#labelTel) {
+    font-size: 1.2rem;
+    margin-bottom: .313rem;
+    width: 100%;
+}
+
+:is(label#labelQui,
+    label#labelSex,
+    label#labelDom) {
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+
+div.inputs-modal label#select {
+    font-size: 1.2rem;
+    margin-bottom: .625rem;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+}
+
+:is(input#nome, input#email, input#cel) {
+    width: 100%;
+    font-size: 1rem;
+    height: 7vh;
+    padding: 1rem;
+    border: .188rem solid var(--color-primary);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+:is(input#nome, input#email, input#cel):focus {
+    outline: .188rem solid var(--color-2nd);
+    border: 0;
+    
+}
+
+:is(input#checkboxQui[type='checkbox'], 
+    input#checkboxSex[type='checkbox'], 
+    input#checkboxDom[type='checkbox']){
+    appearance: none;
+    width: 1.3rem;
+    height: 1.3rem;
+    border: .18rem solid var(--color-2nd);
+    border-radius: 5px;
+}
+
+:is(input#checkboxQui[type='checkbox'], 
+    input#checkboxSex[type='checkbox'], 
+    input#checkboxDom[type='checkbox']):checked{
+    background-color: var(--color-primary);
+    
+}
+
+div#checkbox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    justify-content: space-between;
+}
+
+div#checkbox:last-child {
+    margin-bottom: .5rem;
+}
+
+div#buttonBox {
+    padding: 0rem 1.5rem 0rem 1.5rem;
+    width: 100%;
+    height: 9vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button#button-reserv {
+    background-color: var(--color-2nd);
+    height: 7vh;
+    width: 100%;
+    border: .063rem solid var(--color-2nd);
+    border-radius: .313rem;
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+button#button-reserv:hover {
+    transform: scale(1.05);
+    background-color: var(--color-4th);
+    border: .063rem solid var(--color-4th);
+}
+
+@media (min-width: 500px) {
+
+    .modal-title {
+        text-align: initial;
+        font-size: 1.5rem;
+        font-weight: 600;
+        width: 50%;
+        height: 100%;
+    }
+
+    div#checkbox {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 0;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    div#checkbox:last-child {
+        margin: 1rem 0rem 1rem 0rem;
+    }
+
+    button#button-reserv {
+        margin-bottom: 0rem;
+        background-color: var(--color-2nd);
+        height: 7vh;
+        width: 100%;
+        border: .063rem solid var(--color-2nd);
+        border-radius: .313rem;
+        text-transform: uppercase;
+        color: white;
+        font-size: 1.3rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 500ms;
+    }
+
+    .show-modal .modal {
+        font-family: Verdana, sans-serif;
+        animation: modalAnimation 1s ease;
+        padding: .938rem;
+        border: .313rem solid;
+        border-image: linear-gradient(22.5deg, var(--color-primary), var(--color-2nd)) 1;
+        width: 95%;
+        height: 75%;
+        background-color: white;
+        border-radius: .5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+}
+
+@media (min-width: 1024px) {
+
+    .modal-close {
+        width: 1.5rem;
+        height: 100%;
+        background: transparent;
+        border: none;
+        font-size: 1.6rem;
+        cursor: pointer;
+        font-weight: 600;
+        position: relative;
+        right: 1rem;
+    }
+
+    .inputs-modal {
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem 1rem;
+        width: 70%;
+    }
+
+    :is(label#labelQui,
+    label#labelSex,
+    label#labelDom) {
+        font-size: 1.1rem;
+        text-align: center;
+        width: 11vw;
+    }
+
+    .modal-header {
+        display: flex;
+        justify-content: space-around;
+        padding: 0rem 0rem 1rem 0rem;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .modal-title {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+        width: 100%;
+        height: 100%;
+    }
+
+    div#checkbox {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 0;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    div#checkbox:last-child {
+        margin: 1rem 0rem 1rem 0rem;
+    }
+
+    button#button-reserv {
+        margin-bottom: 0rem;
+        background-color: var(--color-2nd);
+        height: 7vh;
+        width: 50%;
+        border: .063rem solid var(--color-2nd);
+        border-radius: .313rem;
+        text-transform: uppercase;
+        color: white;
+        font-size: 1.3rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 500ms;
+    }
+
+    div#buttonBox {
+        padding: 0rem 1.5rem 0rem 1.5rem;
+        width: 100%;
+        height: 9vh;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .show-modal .modal {
+        font-family: Verdana, sans-serif;
+        animation: modalAnimation 1s ease;
+        padding: .938rem;
+        border: .313rem solid;
+        border-image: linear-gradient(22.5deg, var(--color-primary), var(--color-2nd)) 1;
+        width: 60%;
+        height: 75%;
+        background-color: white;
+        border-radius: .5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+}
+
+@media (min-width: 1920px) {
+    .modal-close {
+        width: 1.5rem;
+        height: 100%;
+        background: transparent;
+        border: none;
+        font-size: 2.6rem;
+        cursor: pointer;
+        font-weight: 600;
+        position: relative;
+        right: 2rem;
+    }
+
+    .inputs-modal {
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem 1rem;
+        width: 70%;
+    }
+
+    :is(input#nome, input#email, input#cel) {
+        width: 100%;
+        font-size: 1.3rem;
+        height: 7vh;
+        padding: 1rem;
+        border: 0.188rem solid var(--color-primary);
+        border-radius: 5px;
+        margin-bottom: 1rem;
+    }
+
+    :is(input#checkboxQui[type='checkbox'], input#checkboxSex[type='checkbox'], input#checkboxDom[type='checkbox']) {
+        appearance: none;
+        width: 1.8rem;
+        height: 1.8rem;
+        border: 0.18rem solid var(--color-2nd);
+        border-radius: 5px;
+    }
+
+    :is(label#labelNome,
+        label#labelEmail,
+        label#labelTel) {
+            font-size: 1.5rem;
+            margin-bottom: .413rem;
+            width: 100%;
+    }
+
+    :is(label#labelQui,
+        label#labelSex,
+        label#labelDom) {
+            font-size: 1.6rem;
+            text-align: center;
+            width: 8vw;
+    }
+
+
+    .modal-header {
+        display: flex;
+        justify-content: space-around;
+        padding: 0rem 0rem 1rem 0rem;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .modal-title {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 600;
+        width: 100%;
+        height: 100%;
+    }
+
+    div#checkbox {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 0;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    div#checkbox:last-child {
+        margin: 1rem 0rem 1rem 0rem;
+    }
+
+    button#button-reserv {
+        margin-bottom: 0rem;
+        background-color: var(--color-2nd);
+        height: 7vh;
+        width: 50%;
+        border: .063rem solid var(--color-2nd);
+        border-radius: .313rem;
+        text-transform: uppercase;
+        color: white;
+        font-size: 1.8rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 500ms;
+    }
+
+    div#buttonBox {
+        padding: 0rem 1.5rem 0rem 1.5rem;
+        width: 100%;
+        height: 9vh;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .show-modal .modal {
+        font-family: Verdana, sans-serif;
+        animation: modalAnimation 1s ease;
+        padding: .938rem;
+        border: .313rem solid;
+        border-image: linear-gradient(22.5deg, var(--color-primary), var(--color-2nd)) 1;
+        width: 50%;
+        height: 75%;
+        background-color: white;
+        border-radius: .5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    div.inputs-modal label#select {
+        font-size: 1.8rem;
+        margin-bottom: 0.625rem;
+        font-weight: 600;
+        text-align: center;
+        width: 100%;
+    }
+    
+}
