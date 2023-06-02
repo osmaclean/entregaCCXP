@@ -10,7 +10,7 @@
 </ul>
 
 ### Descrição
-Projeto criado para o desenvolvimento de uma Landing Page do evento CCXP22, entrega da Escola DNC.
+Projeto criado para o desenvolvimento de uma Landing Page do evento CCXP22, task da Escola DNC.
 
 <hr> 
 
