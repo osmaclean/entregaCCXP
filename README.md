@@ -43,7 +43,6 @@ Modo Mobile 📲
 </div>
 
 ## Parte 2 - Funcionalidade (Modal, Cronômetro) ⚙
-
 Funcionalidade via JavaScript. Utilizando conceitos como IIFE, Use Strict, DOM, Spread Operator, Eventos, Laços, Template String, Métodos, Arrow Function, Function Expression, Condicionais e Operador Ternário. 
 
 <hr>
